@@ -1,7 +1,9 @@
 $(document).ready(function(){
+	var enterNumber = prompt("Enter a Number");
+	var convertNumber = +enterNumber; // "+enterNumber" can be either a number or a function that evaluates to a number
+	var fizzbuzzfunction = function (){
 	for(var i=1; i<=100; i++){
-		// creates a div element and instead of console.log you would have to use "div.text"
-		var div=$("<div>"); 
+		var div=$("<div>"); // creates a div element and instead of console.log you would have to use "div.text"
 		if(i%15 == 0) {
 			div.text("fizzbuzz");
 		}
@@ -13,8 +15,18 @@ $(document).ready(function(){
 		}
 		else{
 			div.text(i);
-		}
-		//selects the body element 
-		$("body").append(div);
+		} 
+		$("body").append(div); //selects the body element
 	}
+	}
+		if(isNaN(convertNumber)){ // The isNaN() function determines whether a value is an illegal number (Not-a-Number).
+		prompt("Please enter a number only!");
+		}
+		else if(convertNumber % 1 == 0){ // this will send an alert if the input is a decimal
+		prompt("Please enter a whole number only!");
+		}
+		else{
+		fizzbuzzfunction();
+		}
 });
+
