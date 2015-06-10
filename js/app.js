@@ -26,7 +26,7 @@ $(document).ready(function(){
 		prompt("Please enter a whole number only!");
 		} 
 		else {
-		fizzbuzzfunction(enternumber);
+		fizzbuzzfunction(enterNumber);
 		}
 });
 
