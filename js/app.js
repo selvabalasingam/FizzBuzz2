@@ -1,11 +1,11 @@
 $(document).ready(function(){
 	var enterNumber = prompt("Enter a Number");
 	var convertNumber = +enterNumber; // "+enterNumber" can be either a number or a function that evaluates to a number
-	var fizzbuzzfunction = function(number){
-	for (var i=1; i<=number; i++){
-		var div=$("<div>"); // creates a div element and instead of console.log you would have to use "div.text"
+	var fizzbuzzfunction = function(number){ // you need to pass an argument into your function and use that argument (use a new name and in this case it's "number")
+	for (var i=1; i<=number; i++){ // use the same new name in the for function
+		var div=$("<div>"); // creates a div
 		if(i%15 == 0) {
-			div.text("fizzbuzz");
+			div.text("fizzbuzz"); // div.text(i) - sets the text of the div
 		} 
 		else if(i%3 == 0) {
 			div.text("fizz");	
@@ -16,7 +16,7 @@ $(document).ready(function(){
 		else{
 			div.text(i);
 		} 
-		$("body").append(div); //selects the body element
+		$("body").append(div); //attaches the div to the body (Selects the body element and then appends the div to the body)
 	}
 	}
 		if(isNaN(convertNumber)){ // The isNaN() function determines whether a value is an illegal number (Not-a-Number).
@@ -26,7 +26,8 @@ $(document).ready(function(){
 		prompt("Please enter a whole number only!");
 		} 
 		else {
-		fizzbuzzfunction(enterNumber);
+		fizzbuzzfunction(enterNumber); // you need to use the variable that houses the user's input 
 		}
 });
+
 
