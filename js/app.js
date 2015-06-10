@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	var enterNumber = prompt("Enter a Number");
 	var convertNumber = +enterNumber; // "+enterNumber" can be either a number or a function that evaluates to a number
-	var fizzbuzzfunction = function (){
-	for(var i=1; i<=100; i++){
+	var fizzbuzzfunction = function(number){
+	for (var i=1; i<=number; i++){
 		var div=$("<div>"); // creates a div element and instead of console.log you would have to use "div.text"
 		if(i%15 == 0) {
 			div.text("fizzbuzz");
@@ -26,7 +26,7 @@ $(document).ready(function(){
 		prompt("Please enter a whole number only!");
 		} 
 		else {
-		fizzbuzzfunction();
+		fizzbuzzfunction(enternumber);
 		}
 });
 
